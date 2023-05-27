@@ -1,0 +1,32 @@
+﻿@using NorthwindTutorialMVC.Models
+@model List<Categories>
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="float:right;margin-bottom:15px;margin-right:15px;">
+    <a href="/Category/New/" class="btn btn-info">NEW Category</a>
+</div>
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryID</td>
+                <td>@item.CategoryName</td>
+                <td>
+                    <a href="/Category/Update/@item.CategoryID" class="btn btn-info">Update</a>
+                    <a href="/Category/Delete/@item.CategoryID" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

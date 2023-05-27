@@ -1,0 +1,19 @@
+﻿@model NorthwindTutorialMVC.Models.Categories
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="margin:15px;">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="text">Category Name:</label>
+                    <input type="text" class="form-control" placeholder="Category Name" name="CategoryName">
+                </div>                
+                <button type="submit" class="btn btn-success">Create</button>
+            </form>
+        </div>
+    </div>
+</div>

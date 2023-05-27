@@ -1,0 +1,36 @@
+﻿@model NorthwindTutorialMVC.Models.Products
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="margin:15px;">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="text">Product Id:</label>
+                    @Html.TextBoxFor(m=>m.ProductID,new { @class="form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="text">Product Name:</label>
+                    @Html.TextBoxFor(m=>m.ProductName,new { @class="form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="text">Category:</label>
+                    @Html.DropDownListFor(m=>m.Categories.CategoryID,(List<SelectListItem>)ViewBag.CtgList, new { @class="form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="text">Unit Price:</label>
+                    @Html.TextBoxFor(m=>m.UnitPrice,new { @class="form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="text">Stock:</label>
+                    @Html.TextBoxFor(m => m.UnitsInStock, new { @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
